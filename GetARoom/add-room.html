@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Get·A·Room &mdash; Add Room</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="images/logo-dark.png" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/mediaelementplayer.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/fl-bigmug-line.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body style="padding-bottom: 40px; background-color: rgb(220, 222, 221)">
+    <div class="site-loader"></div>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+
+        <div class="site-navbar">
+            <div class="container py-1">
+                <div class="row align-items-center">
+                    <div class="col-8 col-md-8 col-lg-4">
+                        <h1 class=""><a href="home.html" class="h5 text-uppercase text-black">
+                                <img src="images/logo-dark-sm.png" width="34" height="34"
+                                    class="d-inline-block mr-1 mb-1" alt=""><strong>Get<span
+                                        class="text-danger">·</span>A<span class="text-danger">·</span>Room</strong>
+                            </a></h1>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-8">
+                        <nav class="site-navigation text-right text-md-right" role="navigation">
+
+                            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                                    class="site-menu-toggle js-menu-toggle text-black"><span
+                                        class="icon-menu h3"></span></a></div>
+
+                            <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                <li><a href="contact.html" target="_blank">Contact</a></li>
+                                <li class="has-children">
+                                    <a href="#">User</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Listings</a></li>
+                                        <li><a href="add-room.html">Add Property</a></li>
+                                        <li class="has-children">
+                                            <a href="show-houses.html">Properties</a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">Buy</a></li>
+                                                <li><a href="#">Rent</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="my-profile.html">Profile</a></li>
+                                        <li><a href="home.html">Log out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width:100%; height: 75px"></div>
+
+    <div class="container" style="background-color: white; border-radius: 5%">
+        <div class="py-5 text-center">
+            <h1 style="color: black; font-family: 'Verdana'; font-weight: bold">Add·A·Room</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 order-md-1">
+                <form class="needs-validation" novalidate method="get">
+
+                    <h3 class="text mb-4" style="color: black">General Information</h3>
+                    <div class="col-md-12">
+                    <div class="row">
+                
+                    <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="titulo">Ad Title</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid title is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="descricao">Description</label>
+                            <textarea type="text" class="form-control" id="descricao" placeholder="Description" value="" required></textarea>
+                            <div class="invalid-feedback">
+                                Valid description is required.
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="http://www.hitad.lk/template/resources/img/thumbnail-default.jpg" style="width:100%" id="currentFoto">
+                        <label style="margin-top: 10px" for="imgRoom">Insert here the url to the pictures.</label>
+                        <input type="text" class="form-control" id="imgRoom">
+                        <button id="addFoto" type="button">Add</button>
+                    </div>
+                </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-4 mb-4">
+                            <label for="pessoas">Max Number of Residents</label>
+                            <select class="form-control" name="pessoas" id="pessoas" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="7">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="8+">+8</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 mb-4">
+                            <label for="camas">Beedrooms available</label>
+                            <select class="form-control" name="camas" id="camas" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4+">4+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4 mb-4">
+                            <label for="WC">WC's</label>
+                            <select class="form-control" name="WC" id="WC" required>
+                                <option value="Privativo">Privativo</option>
+                                <option value="Comum">Comum</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 mb-4">
+                            <label for="despesas">Montly expenses</label>
+                            <select class="form-control" name="despesas" id="despesas" required>
+                                <option value="Incluidas">Included</option>
+                                <option value="Não Incluidas">Not Included</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <hr class="mb-4" />
+
+                    <h3 class="text mb-4" style="color: black">Adress</h3>
+                    <div class="mb-3">
+                        <label for="nomeRua">Street</label>
+                        <input type="text" class="form-control" id="nomeRua" placeholder="Street Name" required>
+                        <div class="invalid-feedback">
+                            Please enter your shipping address.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="freguesia">Parish (Freguesia)</label>
+                            <input type="text" class="form-control" id="freguesia" placeholder="Parish (Freguesia)" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="concelho">Municipality (Concelho)</label>
+                            <input type="text" class="form-control" id="concelho" placeholder="Municipality (Concelho)" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="distrito">District</label>
+                            <input type="text" class="form-control" id="distrito" placeholder="District" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="codigoPostal">Postal Code</label>
+                            <input type="text" class="form-control" id="codigoPostal" placeholder="Postal Code" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="porta">Door Number</label>
+                            <input type="text" class="form-control" id="porta" placeholder="Door Number" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr class="mb-4">
+
+                    <h3 class="text mb-4" style="color: black">Prices</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="precoMensal">Montlhy Price</label>
+                            <input type="text" class="form-control" id="precoMensal" placeholder="€€€" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid price.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="taxaLimpeza">Cleaning Fee</label>
+                            <input type="text" class="form-control" id="taxaLimpeza" placeholder="€€€" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid price.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr class="mb-4">
+
+
+                    <h3 class="text mb-4" style="color: black">Features</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="internet" value="internet">
+                            <label class="form-check-label" for="internet"><b> Internet</b></label>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="maquinaLavarRoupa" value="maquinaLavarRoupa">
+                            <label class="form-check-label" for="maquinaLavarRoupa"><b> Washing Machine</b></label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="aquecimento" value="aquecimento">
+                            <label class="form-check-label" for="aquecimento"><b> Central Air Conditioning</b></label>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="secador" value="secador">
+                            <label class="form-check-label" for="secador"><b> Hairdryer</b></label>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="tvCabo" value="tvCabo">
+                            <label class="form-check-label" for="tvCabo"><b> Cable TV</b></label>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="maquinaLavarLouca" value="maquinaLavarLouca  ">
+                            <label class="form-check-label" for="maquinaLavarLouca"><b> Dishwasher Machine</b></label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="checkbox" type="checkbox" id="elevador" value="elevador">
+                            <label class="form-check-label" for="elevador"><b> Elevator</b></label>
+                        </div>
+                        
+                    </div>
+
+                    <hr class="mb-4">
+                    <div class="row col-md-12">
+                        <div class="offset-4 col-md-2">
+                            <button class=" btn btn-danger btn-lg btn-block" id="cancel" type="button">Cancel</button>
+                        </div>
+                        <div class="offset-1 col-md-2">
+                            <button class="btn btn-primary btn-lg btn-block" id="submit" type="button">Add·A·Room</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/add-room.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/houses.js"></script>
+    <script src="js/add-room.js"></script>
+</body>
+
+</html>
