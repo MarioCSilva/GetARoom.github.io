@@ -115,14 +115,16 @@ jQuery(document).ready(function($) {
 	var siteSliderRange = function() {
     $( "#slider-range" ).slider({
       range: true,
-      min: 10000,
-      max: 1000000,
-      values: [ 200000, 750000 ],
+      min: 0,
+      max: 500,
+      values: [ 50, 250 ],
       slide: function( event, ui ) {
-        $( "#amount" ).val( ui.values[ 0 ] + "€ - " + ui.values[ 1 ] + "€" );
+				$( "#search-price" ).val( ui.values[ 0 ] + "€ - " + ui.values[ 1 ] + "€" );
+				if ( ui.values[ 1 ] == 500)
+					$( "#search-price" ).val( ui.values[ 0 ] + "€ - +500€" );
       }
     });
-    $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+    $( "#search-price" ).val( $( "#slider-range" ).slider( "values", 0 ) +
       "€ - " + $( "#slider-range" ).slider( "values", 1 ) + "€" );
 	};
 	siteSliderRange();
@@ -267,6 +269,23 @@ jQuery(document).ready(function($) {
 	};
 	siteDatePicker();
 
+	class User {
+        constructor(username, password, name, email, contact, imageProfile, typeUser, listedHouses) {
+            this.username = username;
+            this.name = name;
+            this.email = email;
+            this.contact = contact;
+            this.imageProfile = imageProfile;
+            this.password = password;
+            this.typeUser=typeUser;
+            this.listedHouses=listedHouses;
+        }
+    }
 	
-
+	$(".btn-log-out").click(function() {
+        var newUser = new User("", "", "", "", "", "", "visitor", []);
+        users["currentUser"] = newUser;
+        localStorage.setItem("users", JSON.stringify(users));
+        window.location.assign("index.html");
+    })
 });

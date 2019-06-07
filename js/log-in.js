@@ -5,11 +5,12 @@ $(document).ready(function () {
         var username = $("#inputUsername").val();
         var password = $("#inputPassword").val();
         $.each(users, function (index, value) {
-            if (username==value.username & password==value.password){
+            if (username==value.username && password==value.password && username!=""){
                 val=true;
                 users["currentUser"].username=username;
                 users["currentUser"].password=password;
                 users["currentUser"].name=value.name;
+                users["currentUser"].listedHouses=value.listedHouses;
                 users["currentUser"].email=value.email;
                 users["currentUser"].contact=value.contact
                 users["currentUser"].imageProfile=value.imageProfile;
@@ -18,7 +19,7 @@ $(document).ready(function () {
             }
         });
         if (val) {
-            console.log("go to page according to typeUser..")
+            window.location.assign("index.html")
         }
         else {
             alert("Login Inválido!")

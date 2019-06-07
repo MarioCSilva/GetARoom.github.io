@@ -1,16 +1,17 @@
 $(document).ready(function () {
     class House {
-       constructor(titulo, descricao, detalhes, morada, precos, comodidades, fotografias, avaliacao, comentarios) {
-           this.estado = "Nao Validado";       
-           this.titulo = titulo;
-           this.descricao = descricao;
-           this.detalhes = detalhes;
-           this.morada = morada;
-           this.precos = precos;
-           this.comodidades = comodidades;
-           this.fotografias = fotografias;
-           this.avaliacao = avaliacao;
-           this.comentarios = comentarios;
+       constructor(titulo, descricao, detalhes, morada, precos, comodidades, fotografias, avaliacao, comentarios, owner) {
+           this.estado = "Não Validado";
+            this.titulo = titulo;
+            this.descricao = descricao;
+            this.detalhes = detalhes;
+            this.morada = morada;
+            this.precos = precos;
+            this.comodidades = comodidades;
+            this.fotografias = fotografias;
+            this.avaliacao = avaliacao;
+            this.comentarios = comentarios;
+            this.owner=owner;
        }
    }
    users = JSON.parse(localStorage.getItem("users"));
@@ -20,13 +21,14 @@ $(document).ready(function () {
    $("#addFoto").click(function() {
        if (!contains(fotos, $("#imgRoom").val())) {
            fotos.push($("#imgRoom").val());
-           document.getElementById("currentFoto").src=document.getElementById("imgRoom").value;         
-           document.getElementById("imgRoom").value="";
+           $("#currentFoto").attr("src", $("#imgRoom").val());         
+           $("#imgRoom").val("");
+           console.log($("#currentFoto").attr("src"))
        }
    })
 
    $("#cancel").click(function () {
-        window.location.assign("locador.html");
+        window.location.assign("locator-listings.html");
     });
 
     $("#submit").click(function () {
@@ -49,23 +51,24 @@ $(document).ready(function () {
                     comodidades.push(value.id);
             });
        
-            var room = new House($("#titulo").val(), $("#descricao").val(), [$("#pessoas").val(),
+            var room = new House($("#titulo").val(), $("#descricao").val(),[$("#pessoas").val(),
                $("#camas").val(), $("#WC").val(), $("#despesas").val()], [$("#nomeRua").val(),
                $("#freguesia").val(), $("#concelho").val(), $("#distrito").val(), $("#codigoPostal").val(),
-               $("#porta").val()], [$("#precoMensal").val(), $("#taxaLimpeza").val()], comodidades, fotos, "", "");
+               $("#porta").val()], [$("#precoMensal").val(), $("#taxaLimpeza").val()], comodidades, fotos, [], [], users["currentUser"].username);
             houses[$("#titulo").val()] = room;
             user1=users["currentUser"].username;
             users[user1].listedHouses.push($("#titulo").val().split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, ""));
             users["currentUser"].listedHouses.push($("#titulo").val().split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, ""));
             localStorage.setItem("users", JSON.stringify(users));
             localStorage.setItem("houses", JSON.stringify(houses));
+             window.location.assign("locator-listings.html");
         } else if (valid == 1 && contains(houses, $("#titulo").val())) {
            alert("Title already taken.");
         }
    });
     function contains(a, obj) {
    for (key in a) {
-       if (key==obj){
+       if (key.toLowerCase()==obj.toLowerCase()){
            return true;
        }
    }

@@ -44,7 +44,7 @@ $(document).ready(function () {
             users["currentUser"].typeUser=typeUser;
             users["currentUser"].listedHouses=[];
             localStorage.setItem("users", JSON.stringify(users));
-            console.log("go to page according to typeUser..");
+            window.location.assign("index.html");
             // window.location.assign("administrador.html");
         } else if (valid ==1 && contains(users, $("#username").val())){
             alert("Username already taken.");
