@@ -1,0 +1,63 @@
+.rolldown-list {
+  
+  padding: 0;
+  margin: 0;
+}
+
+.rolldown-list li {
+  padding: 1em;
+  margin-bottom: .125em;
+  display: block;
+  list-style: none;
+}
+
+.rolldown-list li {
+  visibility: hidden;
+  animation: rolldown .7s 1;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+}
+
+.rolldown-list li:nth-child(2n) {
+  color:black;
+}
+
+.rolldown-list li:nth-child(2n+1) {
+  background-color: #f89d13;
+  color:white;
+}
+
+#myList {
+  position: absolute;
+  width: 70%; 
+  left: 30%;
+  margin-left: -15%;
+}
+#myList1 {
+  position: absolute;
+  width: 70%; 
+  left: 30%;
+  margin-left: -15%;
+}
+#myList2 {
+  position: absolute;
+  width: 70%; 
+  left: 30%;
+  margin-left: -15%;
+}
+
+
+@keyframes rolldown {
+  0% {
+    visibility: visible;
+    transform: rotateX(180deg) perspective(500px);
+  }
+  70% {
+    visibility: visible;
+    transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
+}
