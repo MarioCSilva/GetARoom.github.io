@@ -78,7 +78,7 @@
             break;
         case "locator":
             $(".site-menu").append(`
-                <li><a href="index.html" data data-toggle="collapse" data-target="#collapseItem0" aria-expanded="false">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
                 <li class="has-children">
                     <a href="#" data data-toggle="collapse" data-target="#collapseItem0" aria-expanded="false">` + users["currentUser"].username + `</a>
