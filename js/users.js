@@ -20,7 +20,7 @@
         "locator4": new User("locator4", "", "Afonso Silva", "afonso@ex.pt", "959372658", "", "locator", ["Double Bedrooms in Sao Bernardo"]),
         "locator5": new User("locator5", "", "Luís Valentim", "luis@ex.pt", "952558753", "", "locator", ["Double Sized Bedrooms for Girls"]),
         "renter": new User("renter", "", "Tiago Oliveira", "tiago@ex.pt", "947716606", "https://semantic-ui.com/images/avatar2/large/matthew.png", "renter", []),
-        "admin": new User("admin", "", "Leandro Silva", "leandro@ex.pt", "978149920", "http://interfacetreinamentos.com.br/wp-content/uploads/2016/04/img-profile-default.jpg", "admin", []),
+        "admin": new User("admin", "1", "Leandro Silva", "leandro@ex.pt", "978149920", "http://interfacetreinamentos.com.br/wp-content/uploads/2016/04/img-profile-default.jpg", "admin", []),
         "currentUser": new User("", "", "", "", "", "", "visitor", []),
     };
     if (localStorage.getItem("users") == null) {
