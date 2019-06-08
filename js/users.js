@@ -37,7 +37,7 @@
                 <li><a href="show-rooms.html">Rooms</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
                 <li><a href="log-in.html">Log in</a></li>
-                <li><a href="sign-in.html" id="btn-sign-in">Sign in</a></li>`);
+                <li><a href="sign-in.html" id="btn-sign-in">Sign Up</a></li>`);
             $("#advertise").attr("href", "log-in.html");
             $("#makeReview").hide();
             break;
