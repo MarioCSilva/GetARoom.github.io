@@ -84,79 +84,84 @@
 
                     <h3 class="text mb-4" style="color: black">General Information</h3>
                     <div class="col-md-12">
-                    <div class="row">
-                
-                    <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label class="text-primary" for="titulo">Ad Title</label>
-                            <input type="text" class="form-control" id="titulo" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Valid title is required.
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="text-primary" for="titulo">Ad Title</label>
+                                        <input type="text" class="form-control" id="titulo" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Valid title is required.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="text-primary" for="descricao">Description</label>
+                                        <textarea type="text" class="form-control" id="descricao"
+                                            placeholder="Description" value="" required></textarea>
+                                        <div class="invalid-feedback">
+                                            Valid description is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="http://www.hitad.lk/template/resources/img/thumbnail-default.jpg"
+                                    style="width:100%" id="currentFoto">
+                                <label class="text-primary" style="margin-top: 10px" for="imgRoom">Insert here the url
+                                    to the pictures.</label>
+                                <input type="text" class="form-control" id="imgRoom">
+                                <button id="addFoto" class="btn-primary" type="button"
+                                    style="color:white;margin:0 auto; display: block; width: 50; margin-top: 1%">Add
+                                    Picture</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-4 mb-4">
+                                <label class="text-primary" for="pessoas">Max Number of Residents</label>
+                                <select class="form-control" name="pessoas" id="pessoas" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="7">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="8+">+8</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4 mb-4">
+                                <label class="text-primary" for="camas">Beedrooms available</label>
+                                <select class="form-control" name="camas" id="camas" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4+">4+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4 mb-4">
+                                <label class="text-primary" for="WC">WC's</label>
+                                <select class="form-control" name="WC" id="WC" required>
+                                    <option value="Private">Private</option>
+                                    <option value="Shared">Shared</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4 mb-4">
+                                <label class="text-primary" for="despesas">Montly expenses</label>
+                                <select class="form-control" name="despesas" id="despesas" required>
+                                    <option value="Included">Included</option>
+                                    <option value="Excluded">Not Included</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label class="text-primary" for="descricao">Description</label>
-                            <textarea type="text" class="form-control" id="descricao" placeholder="Description" value="" required></textarea>
-                            <div class="invalid-feedback">
-                                Valid description is required.
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="http://www.hitad.lk/template/resources/img/thumbnail-default.jpg" style="width:100%" id="currentFoto">
-                        <label class="text-primary" style="margin-top: 10px" for="imgRoom">Insert here the url to the pictures.</label>
-                        <input type="text" class="form-control" id="imgRoom">
-                        <button id="addFoto" class="btn-primary" type="button" style="color:white;margin:0 auto; display: block; width: 50; margin-top: 1%">Add Picture</button>
-                    </div>
-                </div>
-
-                    <div class="row">
-                        <div class="form-group col-md-4 mb-4">
-                            <label class="text-primary" for="pessoas">Max Number of Residents</label>
-                            <select class="form-control" name="pessoas" id="pessoas" required>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="7">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="8+">+8</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4 mb-4">
-                            <label class="text-primary" for="camas">Beedrooms available</label>
-                            <select class="form-control" name="camas" id="camas" required>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4+">4+</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-4 mb-4">
-                            <label class="text-primary" for="WC">WC's</label>
-                            <select class="form-control" name="WC" id="WC" required>
-                                <option value="Private">Private</option>
-                                <option value="Shared">Shared</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4 mb-4">
-                            <label class="text-primary" for="despesas">Montly expenses</label>
-                            <select class="form-control" name="despesas" id="despesas" required>
-                                <option value="Included">Included</option>
-                                <option value="Excluded">Not Included</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
 
 
 
@@ -174,14 +179,16 @@
                     <div class="row">
                         <div class="col-md-4 mb-3">
                             <label class="text-primary" for="freguesia">Parish (Freguesia)</label>
-                            <input type="text" class="form-control" id="freguesia" placeholder="Parish (Freguesia)" required>
+                            <input type="text" class="form-control" id="freguesia" placeholder="Parish (Freguesia)"
+                                required>
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label class="text-primary" for="concelho">Municipality (Concelho)</label>
-                            <input type="text" class="form-control" id="concelho" placeholder="Municipality (Concelho)" required>
+                            <input type="text" class="form-control" id="concelho" placeholder="Municipality (Concelho)"
+                                required>
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -198,7 +205,8 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="text-primary" for="codigoPostal">Postal Code</label>
-                            <input type="text" class="form-control" id="codigoPostal" placeholder="Postal Code" required>
+                            <input type="text" class="form-control" id="codigoPostal" placeholder="Postal Code"
+                                required>
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -245,14 +253,16 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <input class="checkbox" type="checkbox" id="maquinaLavarRoupa" value="maquinaLavarRoupa">
-                            <label class="form-check-label text-primary" for="maquinaLavarRoupa"><b> Washing Machine</b></label>
+                            <label class="form-check-label text-primary" for="maquinaLavarRoupa"><b> Washing
+                                    Machine</b></label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <input class="checkbox" type="checkbox" id="aquecimento" value="aquecimento">
-                            <label class="form-check-label text-primary" for="aquecimento"><b> Central Air Conditioning</b></label>
+                            <label class="form-check-label text-primary" for="aquecimento"><b> Central Air
+                                    Conditioning</b></label>
                         </div>
                         <div class="col-md-6 mb-3">
                             <input class="checkbox" type="checkbox" id="secador" value="secador">
@@ -268,7 +278,8 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <input class="checkbox" type="checkbox" id="maquinaLavarLouca" value="maquinaLavarLouca  ">
-                            <label class="form-check-label text-primary" for="maquinaLavarLouca"><b> Dishwasher Machine</b></label>
+                            <label class="form-check-label text-primary" for="maquinaLavarLouca"><b> Dishwasher
+                                    Machine</b></label>
                         </div>
                     </div>
 
@@ -277,17 +288,20 @@
                             <input class="checkbox" type="checkbox" id="elevador" value="elevador">
                             <label class="form-check-label text-primary" for="elevador"><b> Elevator</b></label>
                         </div>
-                        
+
                     </div>
 
                     <hr class="mb-4">
                     <div class="row col-md-12" style="align-content: center; display: flex; justify-content: center">
-                        <button class="btn btn-primary btn-lg btn-block" style="font-weight: bold" id="submit" type="button">Edit·Room</button>
-                    </div>    
-                    <div class="row col-md-12" style="align-content: center; display: flex; justify-content: center"> <div class="col-md-4">
-                        <button style="margin-top:10%;margin-bottom: 5%; font-weight: bold;color:red" class=" btn btn-secondary btn-lg btn-block" id="cancel" type="button">Cancel</button>
+                        <button class="btn btn-primary btn-lg btn-block" style="font-weight: bold" id="submit"
+                            type="button">Edit·Room</button>
                     </div>
-                </div>
+                    <div class="row col-md-12" style="align-content: center; display: flex; justify-content: center">
+                        <div class="col-md-4">
+                            <button style="margin-top:10%;margin-bottom: 5%; font-weight: bold;color:red"
+                                class=" btn btn-secondary btn-lg btn-block" id="cancel" type="button">Cancel</button>
+                        </div>
+                    </div>
                 </form>
             </div>
 
@@ -295,83 +309,86 @@
         </div>
 
     </div>
-     <footer class="site-footer" style="margin-top: 10%">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="mb-5">
-            <h3 class="footer-heading mb-4">About Get·A·Room</h3>
-            <p> Get·A·Room is a service to book accommodation online and for landlords to list they're places.
-                It distinguishes itself from others because it can be done Online without even leaving your own home, it’s <strong>fast</strong>, <strong>cheap</strong> and <strong>safe</strong> for both parties.</p>
-          </div>
+    <footer class="site-footer" style="margin-top: 10%">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mb-5">
+                        <h3 class="footer-heading mb-4">About Get·A·Room</h3>
+                        <p> Get·A·Room is a service to book accommodation online and for landlords to list they're
+                            places.
+                            It distinguishes itself from others because it can be done Online without even leaving your
+                            own home, it’s <strong>fast</strong>, <strong>cheap</strong> and <strong>safe</strong> for
+                            both parties.</p>
+                    </div>
 
 
 
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <h3 class="footer-heading mb-4">Navigations</h3>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="show-rooms.html">Rooms</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-4 mb-5 mb-lg-0" id="principal-locations">
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <h3 class="footer-heading mb-4">Principal Locations</h3>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Aveiro</a></li>
+                                <li><a href="#">Lisboa</a></li>
+                                <li><a href="#">Porto</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Açores</a></li>
+                                <li><a href="#">Madeira</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4">Navigations</h3>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html" target="_blank">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="show-rooms.html">Rooms</a></li>
-              </ul>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div class="col-lg-4 mb-5 mb-lg-0" id="principal-locations">
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4">Principal Locations</h3>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><p>Aveiro</p></li>
-                <li><p>Lisboa</p></li>
-                <li><p>Porto</p></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><p>Açores</p></li>
-                  <li><p>Madeira</p></li>
-                </ul>
-              </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mediaelement-and-player.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/users.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/houses.js"></script>
-    <script src="js/locatorEdit.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/users.js"></script>
+<script src="js/main.js"></script>
+<script src="js/houses.js"></script>
+<script src="js/locatorEdit.js"></script>
 </body>
 
 </html>
