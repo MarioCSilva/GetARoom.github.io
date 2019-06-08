@@ -29,7 +29,6 @@ $(document).ready(function () {
                                     <span class="title" style="font-size: 18px;font-weight: bold">  `+ imoveis[value].titulo + `</span>
                                 </div>
                                 <div class="col-sm-3">
-                                    <span style="font-size:18px">`+ imoveis[value].estado + `</span>
                                 </div>
                                 <div class="col-sm-3" >
                                     <a href="room-details.html#`+ value.split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, "")+`" class="btn btn-success"><i class="fas fa-search-plus"></i></a>
