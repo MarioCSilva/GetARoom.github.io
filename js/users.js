@@ -38,7 +38,7 @@
                 <li><a href="contact.html" target="_blank">Contact</a></li>
                 <li><a href="log-in.html">Log in</a></li>
                 <li><a href="sign-in.html" id="btn-sign-in">Sign in</a></li>`);
-            $("#advertise-section").attr("href", "log-in.html");
+            $("#advertise").attr("href", "log-in.html");
             $("#makeReview").hide();
             break;
         case "admin":
@@ -56,7 +56,7 @@
                         <li><a href="#" class="btn-log-out">Log out</a></li>
                     </ul>
                 </li>`);
-            $("#advertise-section").hide(); //Também não
+            $("#advertise").hide();
             $("#makeReview").show();
 
             break;
@@ -73,7 +73,7 @@
                         <li><a href="#" class="btn-log-out">Log out</a></li>
                     </ul>
                 </li>`);
-            $("#advertise-section").hide(); //Não funciona
+            $("#advertise-section").hide();
              $("#makeReview").show();
             break;
         case "locator":
