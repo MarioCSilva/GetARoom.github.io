@@ -14,13 +14,13 @@
     }
 
     var users = {
-        "locator1": new User("locator1", "1", "Miguel Almeida", "miguel@ex.pt", "952498753", "", "locator", ["Single Bedroom in Santa Joana","Single Bedroom and a Double Bedroom in Gloria"]),
-        "locator2": new User("locator2", "1", "Pedro Bastos", "pedro@ex.pt", "954862748", "", "locator", ["Single Bedrooms in a Nice Neighborhood"]),
-        "locator3": new User("locator3", "1", "Lucas Botto", "lucas@ex.pt", "953957401", "", "locator", ["Single Bedroom on a T1 Apartment"]),
-        "locator4": new User("locator4", "1", "Afonso Silva", "afonso@ex.pt", "959372658", "", "locator", ["Double Bedrooms in Sao Bernardo"]),
-        "locator5": new User("locator5", "1", "Luís Valentim", "luis@ex.pt", "952558753", "", "locator", ["Double Sized Bedrooms for Girls"]),
-        "renter": new User("renter", "1", "Tiago Oliveira", "tiago@ex.pt", "947716606", "https://semantic-ui.com/images/avatar2/large/matthew.png", "renter", []),
-        "admin": new User("admin", "1", "Leandro Silva", "leandro@ex.pt", "978149920", "http://interfacetreinamentos.com.br/wp-content/uploads/2016/04/img-profile-default.jpg", "admin", []),
+        "locator1": new User("locator1", "", "Miguel Almeida", "miguel@ex.pt", "952498753", "", "locator", ["Single Bedroom in Santa Joana","Single Bedroom and a Double Bedroom in Gloria"]),
+        "locator2": new User("locator2", "", "Pedro Bastos", "pedro@ex.pt", "954862748", "", "locator", ["Single Bedrooms in a Nice Neighborhood"]),
+        "locator3": new User("locator3", "", "Lucas Botto", "lucas@ex.pt", "953957401", "", "locator", ["Single Bedroom on a T1 Apartment"]),
+        "locator4": new User("locator4", "", "Afonso Silva", "afonso@ex.pt", "959372658", "", "locator", ["Double Bedrooms in Sao Bernardo"]),
+        "locator5": new User("locator5", "", "Luís Valentim", "luis@ex.pt", "952558753", "", "locator", ["Double Sized Bedrooms for Girls"]),
+        "renter": new User("renter", "", "Tiago Oliveira", "tiago@ex.pt", "947716606", "https://semantic-ui.com/images/avatar2/large/matthew.png", "renter", []),
+        "admin": new User("admin", "", "Leandro Silva", "leandro@ex.pt", "978149920", "http://interfacetreinamentos.com.br/wp-content/uploads/2016/04/img-profile-default.jpg", "admin", []),
         "currentUser": new User("", "", "", "", "", "", "visitor", []),
     };
     if (localStorage.getItem("users") == null) {
