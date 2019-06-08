@@ -45,7 +45,6 @@ $(document).ready(function () {
             users["currentUser"].listedHouses=[];
             localStorage.setItem("users", JSON.stringify(users));
             window.location.assign("index.html");
-            // window.location.assign("administrador.html");
         } else if (valid ==1 && contains(users, $("#username").val())){
             alert("Username already taken.");
         }

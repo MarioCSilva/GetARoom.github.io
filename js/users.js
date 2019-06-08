@@ -68,7 +68,7 @@
                     <a href="#" data data-toggle="collapse" data-target="#collapseItem0" aria-expanded="false">` + users["currentUser"].username + `</a>
                     <ul class="dropdown">
                         <li><a href="show-rooms.html">Rooms</a></li>
-                        <li><a href="#">Favorites</a></li>
+                        <li><a href="renter-favorites.html">Favorites</a></li>
                         <li><a href="my-profile.html">My Profile</a></li>
                         <li><a href="#" class="btn-log-out">Log out</a></li>
                     </ul>

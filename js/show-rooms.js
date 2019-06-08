@@ -3,10 +3,10 @@ $(document).ready(function () {
 	users = JSON.parse(localStorage.getItem("users"));
 	if (localStorage.getItem("places") == null) {
         localStorage.setItem("places", "");
-    }
+	}
 	var pages, page = 1;
 	var place = localStorage.getItem("places");
-	var count = 0, address = "", expenses = "", beds = "", baths = "", price = [50, 250];
+	var count = 0, expenses = "", beds = "", baths = "", price = [50, 250];
 
 	showHouses();
 
@@ -31,6 +31,12 @@ $(document).ready(function () {
 	$('#index-search-submit').click(function () {
 		var text=$('#index-place').val();
 		localStorage.setItem("places",text);
+		window.location.href = "show-rooms.html"
+	});
+
+	$('#principal-locations').on('click', 'li', function () {
+		var text = $(this).children().text();
+		localStorage.setItem("places", text);
 		window.location.href = "show-rooms.html"
 	});
 
@@ -79,20 +85,21 @@ $(document).ready(function () {
 				count++;
 
 				if (6 * (page - 1) < count && count <= 6 * page) {
+					if (users["currentUser"].typeUser=="renter") {
 					$("#grid").append(
 						`
-					  <div class="col-md-6 col-lg-4 mb-4">
-					  	
-	       				<a href="room-details.html#`+ index.split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, "") + `" class="prop-entry d-block weird">
-	          				<figure>
-	            				<img src="`+ value.fotografias[0] + `" alt="Image" class="img-cropped">
-							</figure>
-	          				<div class="prop-text">
-	            				<div class="inner">
-	              					<span class="price rounded">` + value.precos[0] + ` €</span>
-	              					<h3 class="title">`+ value.titulo + `</h3 >
-	              					<p class="location">`+ value.morada[1] + `, ` + value.morada[2] + `</p>
-	           					</div>
+						<div class="col-md-6 col-lg-4 mb-4 house">
+							<i class="fas fa-heart heart` + (users["currentUser"].listedHouses.includes(index) ? " text-danger" : "") + `" value="` + index + `"></i>
+							<a href="room-details.html#` + index.split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, "") + `" class="prop-entry d-block weird">
+	          		<figure>
+	            		<img src="`+ value.fotografias[0] + `" alt="Image" class="img-cropped">
+								</figure>
+	          		<div class="prop-text">
+	            		<div class="inner">
+	              		<span class="price rounded">` + value.precos[0] + ` €</span>
+	              		<h3 class="title">`+ value.titulo + `</h3 >
+	              		<p class="location">`+ value.morada[1] + `, ` + value.morada[2] + `</p>
+	           			</div>
 									<div class="prop-more-info">
 										<div class="inner d-flex" style="text-align:left">
 											<div class="col">
@@ -108,19 +115,75 @@ $(document).ready(function () {
 												<strong>`+ value.detalhes[2] + `</strong>
 											</div>	                  
 										</div>
-	            					</div>
-	          					</div>
-	        				</a>
-	      				</div>
-			          `
+	            		</div>
+	          		</div>
+	        		</a>
+	      		</div>
+			      `
+					);
+				} else {
+					$("#grid").append(
+						`
+						<div class="col-md-6 col-lg-4 mb-4 house">
+							<a href="room-details.html#` + index.split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, "") + `" class="prop-entry d-block weird">
+	          		<figure>
+	            		<img src="`+ value.fotografias[0] + `" alt="Image" class="img-cropped">
+								</figure>
+	          		<div class="prop-text">
+	            		<div class="inner">
+	              		<span class="price rounded">` + value.precos[0] + ` €</span>
+	              		<h3 class="title">`+ value.titulo + `</h3 >
+	              		<p class="location">`+ value.morada[1] + `, ` + value.morada[2] + `</p>
+	           			</div>
+									<div class="prop-more-info">
+										<div class="inner d-flex" style="text-align:left">
+											<div class="col">
+												<span>Expenses:</span>
+												<strong>`+ value.detalhes[3] + `</strong>
+											</div>
+											<div class="col">
+												<span>Bedrooms:</span>
+												<strong>`+ value.detalhes[1] + `</strong>
+											</div>
+											<div class="col">
+												<span>Bath:</span>
+												<strong>`+ value.detalhes[2] + `</strong>
+											</div>	                  
+										</div>
+	            		</div>
+	          		</div>
+	        		</a>
+	      		</div>
+			      `
 					);
 				}
-			}
+			}}
 			localStorage.setItem("places", "");
 		});
 
 		if ( count == 0 ) { $("#grid").append('<h2 class="mx-auto">No Results Were Found!</h2>') }
-
-		if ( users["currentUser"].typeUser == "renter" ) { $("#grid").children().append('<i class="fas fa-heart heart"></i>'); }
 	}
+
+	$("#grid").on('click', 'i', function () {
+		$(this).toggleClass("text-danger");
+		let index = $(this).attr('value');
+		if ( users["currentUser"].listedHouses.includes(index) ) {
+			console.log('if')
+			for (var i = users["currentUser"].listedHouses.length-1; i >= 0; i--) {
+				if (users["currentUser"].listedHouses[i] === index) {
+					users["currentUser"].listedHouses.splice(i, 1);
+					users[users["currentUser"].username].listedHouses.splice(i, 1);
+					break;
+				}
+			}
+
+		} else {
+			console.log('else')
+			users["currentUser"].listedHouses.push(index)
+			users[users["currentUser"].username].listedHouses.push(index);
+		}
+		localStorage.setItem("users", JSON.stringify(users));
+		// window.location.assign("show-rooms.html");
+		
+	});
 });

@@ -56,7 +56,7 @@ $(document).ready(function () {
                $("#freguesia").val(), $("#concelho").val(), $("#distrito").val(), $("#codigoPostal").val(),
                $("#porta").val()], [$("#precoMensal").val(), $("#taxaLimpeza").val()], comodidades, fotos, [], [], users["currentUser"].username);
             houses[$("#titulo").val()] = room;
-            user1=users["currentUser"].username;
+            user1 = users["currentUser"].username;
             users[user1].listedHouses.push($("#titulo").val().split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, ""));
             users["currentUser"].listedHouses.push($("#titulo").val().split(" ").join("_").normalize('NFD').replace(/[\u0300-\u036f]/g, ""));
             localStorage.setItem("users", JSON.stringify(users));
